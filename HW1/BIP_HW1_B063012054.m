@@ -7,7 +7,6 @@ figure("Name","RGB MRI-1");
 imagesc(rgbimg);
 
 level=[256 128 64 32 16 8 4 2];
-power=[8 7 6 5 4 3 2 1];
 %normalize
 grayimg=rgbimg./(max(rgbimg(:))+1);
 
@@ -30,7 +29,7 @@ end
 ans2b=gray256;
 for ii =1:224
     for jj=1:224
-        if gray256(ii,jj) < 1
+        if gray256(ii,jj) <= 127/255
             ans2b(ii,jj)=0;
         end
     end
@@ -41,7 +40,7 @@ imshow(ans2b);
 ans2c=gray256;
 for ii =1:224
     for jj=1:224
-        if gray256(ii,jj) == 1
+        if gray256(ii,jj) > 127/255
             ans2c(ii,jj)=0;
         end
     end
@@ -52,7 +51,7 @@ imshow(ans2c);
 ans2d=gray256;
 for ii =1:224
     for jj=1:224
-        if gray256(ii,jj) == 0
+        if gray256(ii,jj) <= 1/255
             ans2d(ii,jj)=0;
         end
     end
