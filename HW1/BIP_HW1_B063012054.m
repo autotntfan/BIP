@@ -11,18 +11,18 @@ power=[8 7 6 5 4 3 2 1];
 %normalize
 grayimg=rgbimg./(max(rgbimg(:))+1);
 
-for i=1:length(power)
+for i=1:length(level)
     figure("Name",['Gray MRI-',num2str(level(i))]);
-    scale=1/power(i);
-    %for gray-scale level=256=2^8
-    %0~0.125=0¡B0.126~0.25=1¡B0.26~0.375=2...
+    scale=1/(level(i)-1);
+    %for gray-scale level=256
+    %0~1/256=0¡B1/256~2/256=1¡B2/256~3/256=2...
     Img=round(grayimg./scale);
-    img=Img/power(i);
+    img=Img/(level(i)-1);
     %subplot(4,2,i); %Remove'figure("Name",['Gray MRI-',num2str(level(i))]);'
     imshow(img);
     title(['Gray',num2str(level(i)),'MRI']);
     %Get the grayscale-256 img
-    if scale==1/8
+    if scale==1/255
         gray256=img;      
     end
 end
