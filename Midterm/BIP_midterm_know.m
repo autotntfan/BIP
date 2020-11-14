@@ -6,7 +6,7 @@ clear;
 % the function will emerge a number of figures in order including 
 % 1. y=ax^2+bx+c 
 % 2. mapping 3 pairs (x,y) to the hough space spanned by (a,0,0),(0,b,0),(0,0,c);
-%    e.g. (x,y)=>T=>(a,b,c), R^2 => R^3 
+%    i.e. (x,y)=>T=>(a,b,c), R^2 => R^3 
 % 3. the last figure represents all of the mapping results in abc space.
 % default selecting points are x=[2 -2 -1],and y is determined by input parameters.Hence they must be collinear.
 % X=[x  y] can be used to check if the point is collinear.

@@ -1,15 +1,20 @@
 close all;
 clear;
-% 僅用來查看輸入的三點是否能共線
+% The function is used to find the parameters determined by selected points.
+% Alarm:The function can NOT be used to do including infinite decimal
+% parameters.For example y=5x^2+13*x/6-1,where 13/6 is a infinite decimal.
+% If unfortunately input a infinite decimal,the result must be
+% "noncollinear".
 % parabola : y=ax^2+bx+c ,where a、b、c are unknown,we only know three points
-% and wanna check if they are collinear.
+% and wanna check the parameters.
 % HoughTransform(X1,X2,X3) 
 % the function will emerge a number of figures in order including 
 % 1. mapping 3 pairs (x,y) to the hough space spanned by (a,0,0),(0,b,0),(0,0,c);
-%    e.g. (x,y)=>T=>(a,b,c), R^2 => R^3 
+%    i.e. (x,y)=>T=>(a,b,c), R^2 => R^3 
 % 3. the last figure represents all of the mapping results in abc space.
 % 4. if they are collinear,then print the function,otherwise,print
 % "noncollinear"
+% However,distinct three points in R^2 space can be connected with each other exactly.
 %
 % Xi=[xi  yi] is the point you wanna check that.
 % 
@@ -21,6 +26,8 @@ clear;
 %       
 
 HoughTransform([1,3],[2,7],[-4,13])
+%HoughTransform([2,1],[-3,4],[3,17])
+
 function HoughTransform(X1,X2,X3)
 % y=ax^2+bx+c 
 figure(1);
@@ -29,7 +36,7 @@ x=[X1(1) X2(1) X3(1)];
 y=[X1(2) X2(2) X3(2)];
 plot(x,y,'r*'); %這些點長甚麼樣子
 
-a_x=-5:5;b_y=-5:5; %abc空間坐標軸顯示長度
+a_x=-10:0.1:10;b_y=-10:0.1:10; %abc空間坐標軸顯示長度
 [aa,bb]=meshgrid(a_x,b_y);
 C=["r","g","b"];
 
@@ -70,14 +77,18 @@ if (E_1.*E_2==0)  & (E_3.*E_2==0) & (E_1.*E_3==0)
     xlabel('a'),ylabel('b'),zlabel('c');title(sprintf('404 not found'));
 else
     [m,n]=find((E_1.*E_2)==1);
-    xlabel('a'),ylabel('b'),zlabel('c');title(sprintf('Interaction point=(%.2f,%.2f,%.2f)',aa(m,n),bb(m,n),cc1(m,n)));
-    sprintf('The parameters are a=%.f b=%.f c=%.f\n',aa(m,n),bb(m,n),cc1(m,n))
-    sprintf('y=%.fx^2+%.fx+%.f',aa(m,n),bb(m,n),cc1(m,n))
-    figure;
-    x=-10:10;
-    y=aa(m,n)*x.^2+bb(m,n)*x+cc1(m,n);
-    plot(x,y);
-    title(sprintf('y=%.fx^2+%.fx+%.f',aa(m,n),bb(m,n),cc1(m,n)));
+    if aa(m,n)==10 | bb(m,n)==10
+        sprintf('out of range');
+    else
+        xlabel('a'),ylabel('b'),zlabel('c');title(sprintf('Interaction point=(%.2f,%.2f,%.2f)',aa(m,n),bb(m,n),cc1(m,n)));
+        sprintf('The parameters are a=%.f b=%.f c=%.f\n',aa(m,n),bb(m,n),cc1(m,n))
+        sprintf('y=%.fx^2+%.fx+%.f',aa(m,n),bb(m,n),cc1(m,n))
+        figure;
+        x=-10:10;
+        y=aa(m,n)*x.^2+bb(m,n)*x+cc1(m,n);
+        plot(x,y);
+        title(sprintf('y=%.fx^2+%.fx+%.f',aa(m,n),bb(m,n),cc1(m,n)));
+    end
 end
 end
 
