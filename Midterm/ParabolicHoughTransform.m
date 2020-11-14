@@ -18,7 +18,7 @@
 %       ans = "points are noncollinear"
 %       The curve may be approximate as three points are on the unique straightline,
 %       i.e.X1=[1,2].X2=[2,4],X3=[3,6]
-%                                                                           @2020.11.15 01:55
+%                                                                           @2020.11.15 02:50
 
 function ParabolicHoughTransform(X1,X2,X3)
     % y=ax^2+bx+c 
