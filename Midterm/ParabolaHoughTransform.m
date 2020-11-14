@@ -1,17 +1,14 @@
-close all;
-clear;
-% 僅用來查看輸入的三點是否能共線
-% parabola : y=ax^2+bx+c ,where a、b、c are unknown,we only know three points
-% and wanna check if they are collinear.
-% HoughTransform(X1,X2,X3) 
+
+% The function is used to check if three points are collinear
+% standard parabola equation : y=ax^2+bx+c ,where a、b、c are unknown
+% we only know three points and wanna check if they are collinear.
+% HoughTransform(X1,X2,X3): 
 % the function will emerge a number of figures in order including 
 % 1. mapping 3 pairs (x,y) to the hough space spanned by (a,0,0),(0,b,0),(0,0,c);
 %    e.g. (x,y)=>T=>(a,b,c), R^2 => R^3 
 % 3. the last figure represents all of the mapping results in abc space.
-% 4. if they are collinear,then print the function,otherwise,print
-% "noncollinear"
-%
-% Xi=[xi  yi] is the point you wanna check that.
+% 4. if they are collinear,then print the function,otherwise,print "points are noncollinear"
+% Xi=[xi  yi] is the point you wanna check that,xi and yi are double or int.
 % 
 % for example      
 %       HoughTransform([2,1],[-3,4],[3,16])
@@ -20,8 +17,7 @@ clear;
 %       ans = "points are noncollinear"
 %       
 
-HoughTransform([1,3],[2,7],[-4,13])
-function HoughTransform(X1,X2,X3)
+function ParabolaHoughTransform(X1,X2,X3)
 % y=ax^2+bx+c 
 figure(1);
 

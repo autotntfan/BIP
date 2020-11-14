@@ -1,6 +1,6 @@
 close all;
 clear;
-%僅用來查看原本是共曲線的點，若未知點是否在同一曲線上，使用另外一個檔案
+%僅用來查看原本已知曲線，未知點是否在同一曲線上，若要判斷三點是否形成曲線，使用另外一個檔案
 % y=ax^2+bx+c 
 % HoughTransform(a,b,c,X) 
 % the function will emerge a number of figures in order including 
