@@ -1,7 +1,7 @@
 close all;
 clear;
 % The function is used to find the parameters determined by selected points.
-% Alarm:The function can NOT be used to do including infinite decimal
+% Alert:The function can NOT be used to do including infinite decimal
 % parameters.For example y=5x^2+13*x/6-1,where 13/6 is a infinite decimal.
 % If unfortunately input a infinite decimal,the result must be
 % "noncollinear".
@@ -25,7 +25,9 @@ clear;
 %       ans = "points are noncollinear"
 %       
 
+%p.18
 HoughTransform([1,3],[2,7],[-4,13])
+%p.19
 %HoughTransform([2,1],[-3,4],[3,17])
 
 function HoughTransform(X1,X2,X3)
