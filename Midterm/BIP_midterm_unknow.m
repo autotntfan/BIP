@@ -26,10 +26,10 @@ clear;
 %       
 
 %p.18
-HoughTransform([1,3],[2,7],[-4,13])
+%HoughTransform([1,3],[2,7],[-4,13])
 %p.19
 %HoughTransform([2,1],[-3,4],[3,17])
-
+HoughTransform([1,1],[3,1],[3,0])
 function HoughTransform(X1,X2,X3)
 % y=ax^2+bx+c 
 figure(1);
