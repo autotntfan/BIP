@@ -1,5 +1,7 @@
 # Parabolic Hough Transform  
-language:Matlab  Parabolic function: <img src="https://latex.codecogs.com/gif.latex?y=ax^2&plus;bx&plus;c" title="y=ax^2+bx+c" />  Hough Space:parameter space 
+language：Matlab  
+general form of a parabolic function： <img src="https://latex.codecogs.com/gif.latex?y=ax^2&plus;bx&plus;c" title="y=ax^2+bx+c" />  
+define Hough space：parameter space  i.e. a-b-c space instead of /rho-/theta space
 ###  Input Parameters
 
 ```
@@ -12,7 +14,7 @@ For example
 ```
 ParabolicHoughTransform([2,2,3;4,8,13],[10,10])
 ```
-Check three points (2,4) (2,8) (3,13) in -10 < a < 10 and -10 < b < 10 which can be a parabola.
+Check three points (2,4) (2,8) (3,13) in -10 < a < 10 and -10 < b < 10 which can lie on a parabola.
 Obviously,(2,4) (2,8) both have x = 2 so that must can't lie on a parabola.
 
 ###  Output
