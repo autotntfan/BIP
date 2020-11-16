@@ -12,6 +12,10 @@
 % 4. if they are collinear,then print the function,otherwise,print "They can't form a parabola"
 % Xi=[xi  yi] is the point you wanna check that,xi and yi are double or int.
 % the curve may be approximate if a or b is too small,
+% [a_T,b_T,c_T]=ParabolicHoughTransform(X,UL)
+% a_T,b_T,c_T is a (slightly) exact solution for c=y-ax^2-bx to help you 
+% check if the solution is exact or approximate.
+%
 % for example      
 %       ParabolicHoughTransform([2,-3,3;1,4,17],[10,10])
 %       check what (x,y)=[2,1],[-3,4],[3,17] map to
@@ -23,9 +27,11 @@
 %                                                                           @2020.11.15 02:50
 % 新增限制區域UL解決找不到解問題，加入解三元一次方程式算出正確的abc值，若超出UL則提示更改區域
 % 解決無限小數與a.b過小的問題
-%                                                                           @2020.11.16 00:18
+%                                                                           @2020.11.16 00:35
+% 增加輸出參數值[A_T,B_T,C_T]提供確認匯出的二次曲線是否為一個近似取線，若A_T,B_T,C_T是非常小的值
+% 此曲線是一個近似值，且這三個點因精度問題無法形成一個完美的二次曲線甚至是不存在
 
-function ParabolicHoughTransform(X,UL)
+function [A_T,B_T,C_T]=ParabolicHoughTransform(X,UL)
 %     % y=ax^2+bx+c 
 %     if nargin < 2
 %         error('Not enough input arguments.You need to decide x-y range')
@@ -87,7 +93,11 @@ function ParabolicHoughTransform(X,UL)
     %找到確切值
     syms a b c
     [a_T,b_T,c_T]=solve(a*(X(1,1)^2)+b*X(1,1)+c==X(2,1),a*(X(1,2)^2)+b*X(1,2)+c==X(2,2),a*(X(1,3)^2)+b*X(1,3)+c==X(2,3));
-    vpa(a_T),vpa(b_T)
+    if nargout >0
+        A_T=vpa(a_T);
+        B_T=vpa(b_T);
+        C_T=vpa(c_T);
+    end
     %確認E_1.*E_2.*E_3 若all(Check(:))==1表三平面交於同一平面
     %若Check==1表示某個位置三個矩陣值都相同
     Check=E_1.*E_2.*E_3;
