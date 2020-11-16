@@ -1,7 +1,7 @@
 # Parabolic Hough Transform  
 language：Matlab  
 general form of a parabolic function： <img src="https://latex.codecogs.com/gif.latex?y=ax^2&plus;bx&plus;c" title="y=ax^2+bx+c" />  
-define Hough space：parameter space  i.e. a-b-c space instead of /rho-/theta space
+define Hough space：parameter space  i.e. a-b-c space instead of r-θ space
 ###  Input Parameters
 
 ```
