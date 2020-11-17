@@ -1,18 +1,20 @@
-
-% The function is used to check if three points you selected are on a
-% parabola,a straightline,a point,or they can't be expressed to the  second
-% power.
-% standard parabola equation : y=ax^2+bx+c ,where a、b、c are unknown
-% we only know three points X=(X1,X2,X3)
+% [a_T,b_T,c_T]=ParabolicHoughTransform(X,UL)
+% The function is used to check whether or not three points you selected
+% lie on a parabola,straightline,same point,or they can't even be expressed 
+% in standard parabola equation. 
+% 
+% Standard parabola equation : y=ax^2+bx+c ,where a、b、c are unknown
+% We only know three points X=(X1,X2,X3)
+%
 % ParabolicHoughTransform(X,UL)
-% the function will emerge a number of figures in order including 
+% The function will emerge a number of figures in order including 
 % 1. mapping 3 pairs (x,y) to the hough space spanned by (a,0,0),(0,b,0),(0,0,c);
 %    i.e. (x,y)=>T=>(a,b,c), R^2 => R^3 
 % 3. the last figure represents all of the mapping results in abc space.
 % 4. if they are collinear,then print the function,otherwise,print "They can't form a parabola"
 % Xi=[xi  yi] is the point you wanna check that,xi and yi are double or int.
-% the curve may be approximate if a or b is too small,
-% [a_T,b_T,c_T]=ParabolicHoughTransform(X,UL)
+% Alert:The curve may be approximate if a or b is too small,
+%
 % a_T,b_T,c_T is a (slightly) exact solution for c=y-ax^2-bx to help you 
 % check if the solution is exact or approximate.
 %
@@ -28,8 +30,9 @@
 % 新增限制區域UL解決找不到解問題，加入解三元一次方程式算出正確的abc值，若超出UL則提示更改區域
 % 解決無限小數與a.b過小的問題
 %                                                                           @2020.11.16 00:35
-% 增加輸出參數值[A_T,B_T,C_T]提供確認匯出的二次曲線是否為一個近似取線，若A_T,B_T,C_T是非常小的值
+% 增加輸出參數值[A_T,B_T,C_T]提供確認匯出的二次曲線是否為一個近似曲線，若A_T,B_T,C_T是非常小的值
 % 此曲線是一個近似值，且這三個點因精度問題無法形成一個完美的二次曲線甚至是不存在
+%                                                                           @2020.11.16 22:14
 
 function [A_T,B_T,C_T]=ParabolicHoughTransform(X,UL)
 %     % y=ax^2+bx+c 
