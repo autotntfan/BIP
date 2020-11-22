@@ -115,7 +115,7 @@ figure;imshow(FFT_Sobel,[]);
 xlabel('Sobel filter in the frequency domain')
 FFT_e=FFT.*FFT_Sobel;
 IFFT_e=abs(real(ifft2(FFT_e)));
-figure;imshow(IFFT_e,[]);
+figure;imshow(IFFT_e>0.3*max(IFFT_e(:)));%用閥值二值化圖片
 title('Img processing by Sobel filter');
 
 %courtesy of https://www.cs.uregina.ca/Links/class-info/425/Lab5/M-Functions/paddedsize.m
