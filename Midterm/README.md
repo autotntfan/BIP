@@ -32,7 +32,7 @@ However the function will figure a series of planes in 3-D.
 5. Mapping all points to Hough space.Where is there interaction points if it exists.Otherwise,print "They can't form a parabola"
 6. Plot a figure if they are the same points,a straightline,or on a (approximatly/exactly) parabola.
 
-###  For example  
+###  Properties
 ![image](https://github.com/autotntfan/BIP/blob/master/Midterm/image/e10.jpg)   <img src="https://latex.codecogs.com/gif.latex?y=x^2&plus;2x&plus;1=(x&plus;1)^2" title="y=x^2+2x+1=(x+1)^2" />  
 we wanna check whether or not the point:(4,6) lies on the parabola.  
   
@@ -50,5 +50,7 @@ Second,we map (4,6) to the hough space and place four planes in the same scale.
 We can find that the yellow plane,which is mapped from point(4,6),doesn't interact other planes at previous point (1,2,1).  
 The result implies that points lie on a parabola must interact at a point in the hough space.  
 
-
-
+# BIP_midterm_know.m BIP_midterm_unknow.m
+'''BIP_midterm_know.m''' is used to check whether a selected point lies on the parabola whose parameters are your input ones.  
+'''BIP_midterm_unknow.m''' is used to check whether three selected point lies on the parabola whose parameters are unknow.
+Both '''BIP_midterm_know.m''' and '''BIP_midterm_unknow.m''' roughly estimate the result,there accuracy are much less than '''ParabolicHoughtransform'''.
