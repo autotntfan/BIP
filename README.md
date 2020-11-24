@@ -1,5 +1,5 @@
 # Biomedical Image Investigation 課程學習資料  
-# 授課老師：中山大學電機系吳珮歆老師
+授課老師：中山大學電機系吳珮歆老師
 ## 目錄
 * HW1
   - Digital image foundamental 數位影像原理
