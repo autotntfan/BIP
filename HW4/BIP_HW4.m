@@ -14,6 +14,11 @@ FFT=fftshift(F);
 Re_part=real(FFT);
 Im_part=imag(FFT);
 Magnitude=abs(FFT);
+figure,imshow(Re_part,[]);
+xlabel('real part');
+figure,imshow(Im_part,[]);
+xlabel('Imaginary part');
+
 
 %abs取強度 1+abs(FFT)防止log0無定義 
 %reference:https://stackoverflow.com/questions/13549186/how-to-plot-a-2d-fft-in-matlab
