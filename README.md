@@ -9,7 +9,7 @@
         ii. Gray-2  
            ![image](https://github.com/autotntfan/BIP/blob/master/HW1/HW1_img/HW1_2.jpg)  
     - 顯示MSB(最大位元區域)，即影像強度255~128之區域，再設定MSB=0顯示之  
-        i. 
+        i.  
            ![image](https://github.com/autotntfan/BIP/blob/master/HW1/HW1_img/HW1_4.jpg)  
     - 設定LSB(最小位元區域)為0
 * HW2
@@ -58,7 +58,7 @@
         iv. 高斯高通濾波器 閥值40處理之圖  
            ![image](https://github.com/autotntfan/BIP/blob/master/HW4/HW4_img/HW4_14.jpg)  
     - sobel filter in the frequency domain  
-        i. 
+        i.  
            ![image](https://github.com/autotntfan/BIP/blob/master/HW4/HW4_img/HW4_15.jpg)  
         ii. 於頻域處理後再經反傅立葉轉換之偵測  
            ![image](https://github.com/autotntfan/BIP/blob/master/HW4/HW4_img/HW4_16.jpg)  
@@ -69,36 +69,36 @@
         i. 
            ![image](https://github.com/autotntfan/BIP/blob/master/HW5/HW5_img/1.jpg)  
     - 嘗試抑制雜訊  
-        ii. 
+        ii.  
            ![image](https://github.com/autotntfan/BIP/blob/master/HW5/HW5_img/3.jpg)  
     - 設計wiener filter嘗試還原圖片
 * HW6
   - color image processing、image segmentation
   - 實作內容
     - 獲取canny filter資訊：梯度、非最大值抑制、邊緣偵測  
-        i. x方向梯度
+        i. x方向梯度  
            ![image](https://github.com/autotntfan/BIP/blob/master/HW6/HW6_img/2.png)  
         ii. y方向梯度  
            ![image](https://github.com/autotntfan/BIP/blob/master/HW6/HW6_img/3.png)  
-        iii. 非極大值抑制
+        iii. 非極大值抑制  
            ![image](https://github.com/autotntfan/BIP/blob/master/HW6/HW6_img/5.png)
     - 嘗試修改閥值使邊緣偵測更清楚  
-        i. 雙閥值
+        i. 雙閥值  
            ![image](https://github.com/autotntfan/BIP/blob/master/HW6/HW6_img/7.png)  
     - 藉由霍夫轉換(Hough Transform)尋找鉛直線  
-        i. 
+        i.  
            ![image](https://github.com/autotntfan/BIP/blob/master/HW6/HW6_img/6.png)
 * HW7
   - image segmentation
   - 實作內容
     - canny edge detector  
-        i. 
+        i.  
            ![image](https://github.com/autotntfan/BIP/blob/master/HW7/HW7_img/1.png)  
     - 使用內建函數'''graythresh'''分割灰白質  
-        ii. 
+        ii.  
           ![image](https://github.com/autotntfan/BIP/blob/master/HW7/HW7_img/2.png)  
     - 如何改善灰白質分割精準度  
     - 灰質  
-          ![image](https://github.com/autotntfan/BIP/blob/master/HW7/HW7_img/3.png)  
-    - 白質
+          ![image](https://github.com/autotntfan/BIP/blob/master/HW7/HW7_img/3.png)    
+    - 白質  
           ![image](https://github.com/autotntfan/BIP/blob/master/HW7/HW7_img/4.png)
