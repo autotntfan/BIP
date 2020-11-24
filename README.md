@@ -16,7 +16,7 @@ Biomedical Image Investigation 課程學習資料授課老師：中山大學電�
   - Histogram and intensity transformation and filtering in space domain
   - 實作內容
     - 獲得影像直方分佈圖  
-        i. 
+        i.  
            ![image](https://github.com/autotntfan/BIP/blob/master/HW2/HW2_img/HW2_1.jpg)
     - histogram equalization  
         i. 處理後之影像直方分佈圖  
