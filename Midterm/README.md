@@ -53,4 +53,4 @@ The result implies that points lie on a parabola must interact at a point in the
 # BIP_midterm_know.m BIP_midterm_unknow.m
 ```BIP_midterm_know.m``` is used to check whether a selected point lies on the parabola whose parameters are your input ones.  
 ```BIP_midterm_unknow.m``` is used to check whether three selected point lies on the parabola whose parameters are unknow.
-Both '''BIP_midterm_know.m''' and '''BIP_midterm_unknow.m''' roughly estimate the result,there accuracy are much less than '''ParabolicHoughtransform'''.
+Both ```BIP_midterm_know.m``` and ```BIP_midterm_unknow.m``` roughly estimate the result,there accuracy are much less than ```ParabolicHoughtransform```.
