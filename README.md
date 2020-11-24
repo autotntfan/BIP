@@ -1,11 +1,15 @@
-# Biomedical Image Investigation 課程學習資料  
-  授課老師：中山大學電機系吳珮歆老師
+# Biomedical Image Investigation 課程學習資料  授課老師：中山大學電機系吳珮歆老師
 ## 目錄
 * HW1
   - Digital image foundamental 數位影像原理
   - 實作內容
     - 撰寫腳本以調整影像灰階強度於0~255間
+      Gray-256
+      ![image](https://github.com/autotntfan/BIP/blob/master/HW1/HW1_img/HW1_1.jpg)
+      Gray-2
+      ![image](https://github.com/autotntfan/BIP/blob/master/HW1/HW1_img/HW1_2.jpg)
     - 顯示MSB(最大位元區域)，即影像強度255~128之區域，再設定MSB=0顯示之
+      ![image](https://github.com/autotntfan/BIP/blob/master/HW1/HW1_img/HW1_4.jpg)
     - 設定LSB(最小位元區域)為0
 * HW2
   - Histogram and intensity transformation and filtering in space domain
