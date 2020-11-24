@@ -32,4 +32,16 @@ However the function will figure a series of planes in 3-D.
 5. Mapping all points to Hough space.Where is there interaction points if it exists.Otherwise,print "They can't form a parabola"
 6. Plot a figure if they are the same points,a straightline,or on a (approximatly/exactly) parabola.
 
+###  For example  
+<img src="https://latex.codecogs.com/gif.latex?y=x^2&plus;2x&plus;1=(x&plus;1)^2" title="y=x^2+2x+1=(x+1)^2" />and we wanna check whether or not the point:(4,6) lies on the parabola.
+![image](https://github.com/autotntfan/BIP/blob/master/Midterm/image/e10.jpg)  
+First,we select three points lie on the parabola and be mapped to hough space(parameter space).  
+![image](https://github.com/autotntfan/BIP/blob/master/Midterm/image/e11.png) ![image](https://github.com/autotntfan/BIP/blob/master/Midterm/image/e12.png) 
+![image](https://github.com/autotntfan/BIP/blob/master/Midterm/image/e13.png)  
+Place three planes in the same scale.We find that there exists a interaction  point:(1,2,1),which means that a.b.c are 1.2.1 respectively.Hence,the parabolic function is <img src="https://latex.codecogs.com/gif.latex?y=x^2&plus;2x&plus;1=(x&plus;1)^2" title="y=x^2+2x+1=(x+1)^2" /> as we know.  
+Now,we map (4,6) to hough space then place four planes in the same scale. 
+![image](https://github.com/autotntfan/BIP/blob/master/Midterm/image/e14.png)  ![image](https://github.com/autotntfan/BIP/blob/master/Midterm/image/e16.png)
+We can find that the yellow plane,which is mapped from point(4,6),doesn't interact other planes at previous point (1,2,1).So we can conclude that points lie on a parabola must interact at a point in the hough space.
+
+![image](https://github.com/autotntfan/BIP/blob/master/Midterm/image/e15.png)
 
