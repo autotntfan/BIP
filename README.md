@@ -1,5 +1,5 @@
-# Biomedical Image Investigation 課程學習資料  授課老師：中山大學電機系吳珮歆老師
-## 目錄
+Biomedical Image Investigation 課程學習資料授課老師：中山大學電機系吳珮歆老師
+---
 * HW1
   - Digital image foundamental 數位影像原理
   - 實作內容
@@ -16,7 +16,7 @@
   - Histogram and intensity transformation and filtering in space domain
   - 實作內容
     - 獲得影像直方分佈圖  
-        i. 
+        i.  
            ![image](https://github.com/autotntfan/BIP/blob/master/HW2/HW2_img/HW2_1.jpg)
     - histogram equalization  
         i. 處理後之影像直方分佈圖  
