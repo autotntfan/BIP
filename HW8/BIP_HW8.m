@@ -43,14 +43,16 @@ end
 %計算水平轉了幾度，查看了伸縮倍數大約都是1倍因此視為做旋轉和shearing
 hrz_theta=max(data(2,1:4));
 pdc_theta=max(data(2,5:8));
-rotate_img=imrotate(I2warp,hrz_theta);
-[Fr,Fc]=find(rotate_img~=0,1,'first');
-[Lr,Lc]=find(rotate_img~=0,1,'last');
-rotate_img=rotate_img(Fr:Lr,Fc:Lc);
+rotate_img=rotate(I2warp,hrz_theta);
 figure,imshow(rotate_img,[]);
-[m,n]=size(rotate_img);
-pdc_len=round(m/sec(pdc_theta*pi/180));
-hrz_len=round(n-m*tan(pdc_theta*pi/180));
+rotate_img=imrotate(I2warp,hrz_theta);
+% [Fr,Fc]=find(rotate_img~=0,1,'first');
+% [Lr,Lc]=find(rotate_img~=0,1,'last');
+% rotate_img=rotate_img(Fr:Lr,Fc:Lc);
+figure,imshow(rotate_img,[]);
+% [m,n]=size(rotate_img);
+% pdc_len=round(m/sec(pdc_theta*pi/180));
+% hrz_len=round(n-m*tan(pdc_theta*pi/180));
 
 newImage=zeros(pdc_len,hrz_len);
 for ii=1:pdc_len
@@ -80,3 +82,51 @@ function [scale,theta]=vtheta(u,v)
     scale=sqrt(dot(u,u))/sqrt(dot(v,v));
 end
 
+function newImage=rotate(img,rot)
+img=double(img);
+[m,n]=size(img);
+O=round([m n]./2); %O(y,x)
+newImage=zeros(max([m,n]));
+data=zeros(400000,3);
+count=1;
+%ii:y jj:x
+for ii = 1:m
+    jj_1=find(img(ii,:)~=0,1,'first');
+    jj_2=find(img(ii,:)~=0,1,'last');
+    for jj=jj_1:jj_2
+        x=jj-O(2);y=O(1)-ii;
+        theta=atan(y/x)*180/pi;
+        if theta<0
+            if x<0
+                theta=180+theta;
+            else
+                theta=360+theta;
+            end
+        else
+            if x<0
+                theta=180+theta;
+            else
+                theta=theta;
+            end
+        end
+        dist=sqrt(x^2+y^2);
+        data(count,:)=[img(ii,jj),dist,theta];
+        count=count+1;
+    end
+end
+
+data(:,3)=data(:,3)+rot;   
+last=find(data(:,1)~=0,1,'last');
+for kk =1:last
+    if data(kk,3)>360
+        data(kk,3)=data(kk,3)-360;
+    end
+    deg=double(data(kk,3)*pi/180);
+    if isnan(deg) 
+        continue
+    end
+    x=O(2)+round(data(kk,2)*cos(deg))+(m-n)/2;
+    y=O(1)-round(data(kk,2)*sin(deg));
+    newImage(y,x)=data(kk,1);
+end
+end
