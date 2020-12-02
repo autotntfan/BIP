@@ -357,7 +357,7 @@ n=c+c_1;
 %計算新圖片的維度最保險的方法就是兩張圖片維度相加
 newImage=zeros(m,n);
 newImage(1:r,1:c)=img;
-%計算處理完的圖片要平移到何處，藉由我們的points與標籤可以輕鬆得到相對位置
+%計算處理完的圖片要平移到何處，藉由我們的points中的label可以輕鬆得到相對位置
 dx=abs(round(mean(points(1,:)-points(3,:))));
 dy=abs(round(mean(points(2,:)-points(4,:))));
 newImage(dy:dy+r_1-1,dx:dx+c_1-1)=img_1;
