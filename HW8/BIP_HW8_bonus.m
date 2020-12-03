@@ -40,7 +40,7 @@ title('computed between in the ROI of Irad and the whole Itof');
 figure,subplot(121);
 imshow(Itof,[]);
 hold on;
-plot(xmax,ymax,'ro');
+plot([xmax-7 xmax-7 xmax+7 xmax+7 xmax-7],[ymax-7 ymax+7 ymax+7 ymax-7 ymax-7],'r-');
 xlabel('region SSS of Irad mapping to Itof');
 subplot(122);
 imshow(Irad,[]);
