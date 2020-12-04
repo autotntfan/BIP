@@ -99,6 +99,9 @@ Biomedical Image Investigation 課程學習資料授課老師：中山大學電�
 * HW8  
   - image registration  
   - 實作內容  
+    - original image  
+      ![image](https://github.com/autotntfan/BIP/blob/master/HW8/image/selected.png)  
+      ![image](https://github.com/autotntfan/BIP/blob/master/HW8/image/selected1.png)  
     - rotate image  
       ![image](https://github.com/autotntfan/BIP/blob/master/HW8/image/rotate_withnear.png)  
     - shear image  
