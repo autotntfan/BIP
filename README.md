@@ -14,7 +14,7 @@ Biomedical Image Investigation 課程學習資料授課老師：中山大學電�
     - 原始影像直方分佈圖  
            ![image](https://github.com/autotntfan/BIP/blob/master/HW2/HW2_img/HW2_1.jpg)
     - histogram equalization
-      - 處理後之影像與直方分佈圖  
+        處理後之影像與直方分佈圖  
            ![image](https://github.com/autotntfan/BIP/blob/master/HW2/HW2_img/HW2_5.jpg)     ![image](https://github.com/autotntfan/BIP/blob/master/HW2/HW2_img/HW2_6.jpg)      
 * HW3
   - filtering in space domain
