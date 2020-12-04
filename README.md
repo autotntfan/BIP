@@ -9,14 +9,12 @@ Biomedical Image Investigation 課程學習資料授課老師：中山大學電�
         ii. Gray-2  
            ![image](https://github.com/autotntfan/BIP/blob/master/HW1/HW1_img/HW1_2.jpg)  
     - 顯示MSB(最大位元區域)，即影像強度255~128之區域，再設定MSB=0顯示之  
-        i.  
            ![image](https://github.com/autotntfan/BIP/blob/master/HW1/HW1_img/HW1_4.jpg)  
     - 設定LSB(最小位元區域)為0
 * HW2
   - Histogram and intensity transformation and filtering in space domain
   - 實作內容
     - 獲得影像直方分佈圖  
-        i.  
            ![image](https://github.com/autotntfan/BIP/blob/master/HW2/HW2_img/HW2_1.jpg)
     - histogram equalization  
         i. 處理後之影像直方分佈圖  
@@ -66,10 +64,8 @@ Biomedical Image Investigation 課程學習資料授課老師：中山大學電�
   - Image restoration
   - 實作內容
     - 選定區域之雜訊直方分布圖 
-        i. 
            ![image](https://github.com/autotntfan/BIP/blob/master/HW5/HW5_img/1.jpg)  
     - 嘗試抑制雜訊  
-        ii.  
            ![image](https://github.com/autotntfan/BIP/blob/master/HW5/HW5_img/3.jpg)  
     - 設計wiener filter嘗試還原圖片
 * HW6
@@ -92,13 +88,24 @@ Biomedical Image Investigation 課程學習資料授課老師：中山大學電�
   - image segmentation
   - 實作內容
     - canny edge detector  
-        i.  
            ![image](https://github.com/autotntfan/BIP/blob/master/HW7/HW7_img/1.png)  
     - 使用內建函數'''graythresh'''分割灰白質  
-        ii.  
           ![image](https://github.com/autotntfan/BIP/blob/master/HW7/HW7_img/2.png)  
     - 如何改善灰白質分割精準度  
     - 灰質  
           ![image](https://github.com/autotntfan/BIP/blob/master/HW7/HW7_img/3.png)    
     - 白質  
           ![image](https://github.com/autotntfan/BIP/blob/master/HW7/HW7_img/4.png)
+* HW8  
+  - image registration  
+  - 實作內容  
+    - rotate image  
+      ![image](https://github.com/autotntfan/BIP/blob/master/HW8/HW8_img/rotate_withnear.png)  
+    - shear image  
+      ![image](https://github.com/autotntfan/BIP/blob/master/HW8/HW8_img/shearing.png)  
+    - scale image  
+      ![image](https://github.com/autotntfan/BIP/blob/master/HW8/HW8_img/scaling.png)  
+    - result  
+      ![image](https://github.com/autotntfan/BIP/blob/master/HW8/HW8_img/final.png)  
+* HW9
+    
