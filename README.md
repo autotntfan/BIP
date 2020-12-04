@@ -100,12 +100,12 @@ Biomedical Image Investigation 課程學習資料授課老師：中山大學電�
   - image registration  
   - 實作內容  
     - rotate image  
-      ![image](https://github.com/autotntfan/BIP/blob/master/HW8/HW8_img/rotate_withnear.png)  
+      ![image](https://github.com/autotntfan/BIP/blob/master/HW8/image/rotate_withnear.png)  
     - shear image  
-      ![image](https://github.com/autotntfan/BIP/blob/master/HW8/HW8_img/shearing.png)  
+      ![image](https://github.com/autotntfan/BIP/blob/master/HW8/image/shearing.png)  
     - scale image  
-      ![image](https://github.com/autotntfan/BIP/blob/master/HW8/HW8_img/scaling.png)  
+      ![image](https://github.com/autotntfan/BIP/blob/master/HW8/image/scaling.png)  
     - result  
-      ![image](https://github.com/autotntfan/BIP/blob/master/HW8/HW8_img/final.png)  
+      ![image](https://github.com/autotntfan/BIP/blob/master/HW8/image/final.png)  
 * HW9
     
