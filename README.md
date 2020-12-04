@@ -29,17 +29,23 @@ Biomedical Image Investigation 課程學習資料授課老師：中山大學電�
 * HW3
 
   - filtering in space domain
+
   - 實作內容
+
     - 自行拍攝圖片，獲取垂直與水平方向梯度，偵測邊緣  
           ![image](https://github.com/autotntfan/BIP/blob/master/HW3/HW3_img/HW3_1.jpg)         
+
     - 嘗試prewitt、sobel、Frei-Chen、Roberts  
-          prewitt 鉛直、水平、全方向之梯度  
-           ![image](https://github.com/autotntfan/BIP/blob/master/HW3/HW3_img/HW3_2.jpg)     ![image](https://github.com/autotntfan/BIP/blob/master/HW3/HW3_img/HW3_3.jpg)  
+          ![image](https://github.com/autotntfan/BIP/blob/master/HW3/HW3_img/HW3_2.jpg)     ![image](https://github.com/autotntfan/BIP/blob/master/HW3/HW3_img/HW3_3.jpg)  
+
+      ​																							prewitt 鉛直、水平、全方向之梯度  
+
     - 將MRI影像作邊緣偵測，若經histogram equalization後再處理有何不同  
       i. 未經histogram equalization即做邊緣偵測  
          ![image](https://github.com/autotntfan/BIP/blob/master/HW3/HW3_img/HW3_10.jpg)  
       ii. 經histogram equalization再做邊緣偵測  
          ![image](https://github.com/autotntfan/BIP/blob/master/HW3/HW3_img/HW3_13.jpg)  
+
     - 嘗試猜測圖片經過何種濾鏡處理
 
 * HW4
