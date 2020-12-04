@@ -128,16 +128,16 @@ Biomedical Image Investigation 課程學習資料授課老師：中山大學電�
 
     - statistics
     - 實作內容  
-        -  table
+        -  table  
         ![image](https://github.com/autotntfan/BIP/blob/master/HW9/image/table.png)
-        -  pie chart
+        -  pie chart  
         ![image](https://github.com/autotntfan/BIP/blob/master/HW9/image/pie.png)
-        -  histogram
+        -  histogram  
         ![image](https://github.com/autotntfan/BIP/blob/master/HW9/image/histogram.png)
-        -  box plot
+        -  box plot  
         ![image](https://github.com/autotntfan/BIP/blob/master/HW9/image/boxplot.png)  
             >definition  
             ![image](https://github.com/autotntfan/BIP/blob/master/HW9/image/demo.png)
 
-        -  bar chart with errorbar
+        -  bar chart with errorbar  
         ![image](https://github.com/autotntfan/BIP/blob/master/HW9/image/barchart.png)
