@@ -33,10 +33,8 @@ Biomedical Image Investigation 課程學習資料授課老師：中山大學電�
     - 自行拍攝圖片，獲取垂直與水平方向梯度，偵測邊緣  
           ![image](https://github.com/autotntfan/BIP/blob/master/HW3/HW3_img/HW3_1.jpg)         
 
-    - 嘗試prewitt、sobel、Frei-Chen、Roberts  
+    - 嘗試prewitt、sobel、Frei-Chen、Roberts(附圖為prewitt 鉛直、水平、全方向之梯度)
           ![image](https://github.com/autotntfan/BIP/blob/master/HW3/HW3_img/HW3_2.jpg)     ![image](https://github.com/autotntfan/BIP/blob/master/HW3/HW3_img/HW3_3.jpg)  
-
-      <br/>prewitt 鉛直、水平、全方向之梯度  
 
     - 將MRI影像作邊緣偵測，若經histogram equalization後再處理有何不同  
       i. 未經histogram equalization即做邊緣偵測  
@@ -50,10 +48,9 @@ Biomedical Image Investigation 課程學習資料授課老師：中山大學電�
 
   - filtering in frequency domain 
   - 實作內容
-    - 影像經FFT轉換後之強度、實部與虛部  
-      i. 影像頻域圖  
+    - 影像經FFT轉換後之強度、實部與虛部   
         ![image](https://github.com/autotntfan/BIP/blob/master/HW4/HW4_img/HW4_3.jpg)  
-    - 影像經IFFT轉換  
+    - 經IFFT轉換回影像  
     - 頻域之濾鏡處理  
     - 高斯濾波器閥值影響  
       i. 高斯高通濾波器 閥值20之頻譜  
@@ -128,3 +125,19 @@ Biomedical Image Investigation 課程學習資料授課老師：中山大學電�
       ![image](https://github.com/autotntfan/BIP/blob/master/HW8/image/final.png)  
 
 * HW9
+
+    - statistics
+    - 實作內容  
+        -  table
+        ![image](https://github.com/autotntfan/BIP/blob/master/HW9/image/table.png)
+        -  pie chart
+        ![image](https://github.com/autotntfan/BIP/blob/master/HW9/image/pie.png)
+        -  histogram
+        ![image](https://github.com/autotntfan/BIP/blob/master/HW9/image/histogram.png)
+        -  box plot
+        ![image](https://github.com/autotntfan/BIP/blob/master/HW9/image/boxplot.png)  
+            >definition
+            ![image](https://github.com/autotntfan/BIP/blob/master/HW9/image/demo.png)
+
+        -  bar chart with errorbar
+        ![image](https://github.com/autotntfan/BIP/blob/master/HW9/image/barchart.png)
