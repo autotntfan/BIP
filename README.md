@@ -4,21 +4,18 @@ Biomedical Image Investigation 課程學習資料授課老師：中山大學電�
   - Digital image foundamental 數位影像原理
   - 實作內容
     - 調整影像灰階強度於0~255間  
-        i. Gray-256                                                                          ii. Gray-2  
         ![image](https://github.com/autotntfan/BIP/blob/master/HW1/HW1_img/HW1_1.jpg)        ![image](https://github.com/autotntfan/BIP/blob/master/HW1/HW1_img/HW1_2.jpg)
     - 顯示MSB(最大位元區域)，即影像強度255~128之區域，再設定MSB=0顯示之  
-           ![image](https://github.com/autotntfan/BIP/blob/master/HW1/HW1_img/HW1_4.jpg)  
+        ![image](https://github.com/autotntfan/BIP/blob/master/HW1/HW1_img/HW1_4.jpg)  
     - 設定LSB(最小位元區域)為0
 * HW2
   - Histogram and intensity transformation and filtering in space domain
   - 實作內容
-    - 獲得影像直方分佈圖  
+    - 原始影像直方分佈圖  
            ![image](https://github.com/autotntfan/BIP/blob/master/HW2/HW2_img/HW2_1.jpg)
     - histogram equalization  
-        i. 處理後之影像直方分佈圖  
-           ![image](https://github.com/autotntfan/BIP/blob/master/HW2/HW2_img/HW2_5.jpg)  
-        ii. 經處理後之圖  
-           ![image](https://github.com/autotntfan/BIP/blob/master/HW2/HW2_img/HW2_6.jpg)
+        處理後之影像與直方分佈圖  
+           ![image](https://github.com/autotntfan/BIP/blob/master/HW2/HW2_img/HW2_5.jpg)![image](https://github.com/autotntfan/BIP/blob/master/HW2/HW2_img/HW2_6.jpg)
         
 * HW3
   - filtering in space domain
