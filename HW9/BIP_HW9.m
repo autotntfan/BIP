@@ -41,7 +41,7 @@ end
 newT=table({'Gender(M/F)';'Age(years)';'Height(m)';'Weight(kg)';'Vel rate(cm/s^2)';'Flow rate(ml/(min^2*100g)'},...
 {G1_Gender;G1_Age;G1_Height;G1_Weight;G1_Vel_rate;G1_Flow_rate},{G2_Gender;G2_Age;G2_Height;G2_Weight;G2_Vel_rate;G2_Flow_rate});
 %投影片要求Group1 (n=?)但table抬頭無法命名含有()、=、空格的名字，因此用Group1_n代替
-newT.Properties.VariableNames={'Variable',['Group1_' num2str(numel(Group1))],['Group2_' num2str(numel(Group2))]};
+newT.Properties.VariableNames={'Variable',['Group1_' num2str(numel(Group1.Group))],['Group2_' num2str(numel(Group2.Group))]};
 newT
 %%%------------------------------------Q2-----------------------------------
 %過濾出疾病分類有哪些
@@ -85,8 +85,18 @@ G2_IQR=[max(get(B(2,2),'YData')) min(get(B(1,2),'YData'))];
 G1_max=mean(get(B(3,1),'YData'));G2_max=mean(get(B(3,2),'YData'));
 G1_min=mean(get(B(4,1),'YData'));G2_min=mean(get(B(4,2),'YData'));
 G1_Outliers=get(B(7,1),'YData');G2_Outliers=get(B(7,2),'YData');
-G1={num2str(G1_median);num2str(G1_IQR);num2str([G1_min G1_max]);num2str(G1_max);num2str(G1_min);num2str(G1_Outliers)};
-G2={num2str(G2_median);num2str(G2_IQR);num2str([G2_min G2_max]);num2str(G2_max);num2str(G2_min);num2str(G2_Outliers)};
+
+%亦可使用 fitdist(G1_CBF,'Normal')
+SEM = std(G1_CBF)/sqrt(numel(Group1.Group));               % Standard Error
+ts = tinv([0.025  0.975],numel(Group1.Group)-1);      % T-Score
+G1_CI = mean(G1_CBF)+ts*SEM;                     % Confidence Intervals
+SEM = std(G2_CBF)/sqrt(numel(Group2.Group));               % Standard Error
+ts = tinv([0.025  0.975],numel(Group2.Group)-1);      % T-Score
+G2_CI = mean(G2_CBF)+ts*SEM;                    % Confidence Intervals
+
+
+G1={num2str(G1_median);num2str(G1_IQR);num2str(G1_CI);num2str(G1_max);num2str(G1_min);num2str(G1_Outliers)};
+G2={num2str(G2_median);num2str(G2_IQR);num2str(G2_CI);num2str(G2_max);num2str(G2_min);num2str(G2_Outliers)};
 %匯出資訊
 table({'meidan';'IOR';'95% center range';'maximum';'minimum';'outliers'},G1,G2,'VariableNames',{'subject' 'Group1' 'Group2'})
 %%%------------------------------------Q5-----------------------------------
@@ -117,9 +127,9 @@ ngroups = size(y, 1);
 nbars = size(y, 2);
 % Calculating the width for each bar group
 groupwidth = min(0.8, nbars/(nbars + 1.5));
-for i = 1:nbars
-    x = (1:ngroups) - groupwidth/2 + (2*i-1) * groupwidth / (2*nbars);
-    errorbar(x, y(:,i), err(:,i), '.');
+for ii = 1:nbars
+    x = (1:ngroups) - groupwidth/2 + (2*ii-1) * groupwidth / (2*nbars);
+    errorbar(x, y(:,ii), err(:,ii), '.');
 end
 
 yyaxis right
@@ -135,10 +145,10 @@ ngroups = size(y, 1);
 nbars = size(y, 2);
 % Calculating the width for each bar group
 groupwidth = min(0.8, nbars/(nbars + 1.5));
-for i = 1:nbars
-    x = (1:ngroups) - groupwidth/2 + (2*i-1) * groupwidth / (2*nbars);
+for ii = 1:nbars
+    x = (1:ngroups) - groupwidth/2 + (2*ii-1) * groupwidth / (2*nbars);
     %由於已知間隔為1 因此第二組圖的水平位置需要+1
-    errorbar(1+x, y(:,i), err(:,i), '.','Color','k');
+    errorbar(1+x, y(:,ii), err(:,ii), '.','Color','k');
 end
 set(gca,'xticklabel',["CBF rate","Velocity rate"]);
 legend('Group1','Group2','Location','northwest')
