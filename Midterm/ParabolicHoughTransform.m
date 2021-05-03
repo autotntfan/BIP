@@ -94,8 +94,8 @@ function [A_T,B_T,C_T]=ParabolicHoughTransform(X,UL)
     %      ......not found
     %
     %§ä¨ì½T¤Á­È
-    syms a b c
-    [a_T,b_T,c_T]=solve(a*(X(1,1)^2)+b*X(1,1)+c==X(2,1),a*(X(1,2)^2)+b*X(1,2)+c==X(2,2),a*(X(1,3)^2)+b*X(1,3)+c==X(2,3));
+    T=[X(1,1)^2 X(1,1) 1;X(1,2)^2 X(1,2) 1;X(1,3)^2 X(1,3) 1]\[X(2,1);X(2,2);X(2,3)];
+    a_T=T(1);b_T=T(2);c_T=T(3);
     if nargout >0
         A_T=vpa(a_T);
         B_T=vpa(b_T);
